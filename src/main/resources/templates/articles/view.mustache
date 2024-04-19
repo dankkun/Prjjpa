@@ -1,0 +1,28 @@
+{{>layouts/header}}
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Title</th>
+      <th scope="col">Content</th>
+    </tr>
+  </thead>
+  <tbody>
+  	{{! 주석입니다}}
+  	{{! #article}}
+    <tr>
+      <th scope="row">{{ article.id }}</th>
+      <td>{{ article.title }}</td>
+      <td>{{ article.content }}</td>
+    </tr>
+    {{! /article}}
+  </tbody>
+</table>
+
+<a href="/articles/list" class="btn btn-primary">목록</a>
+<a href="/articles/writeform" class="btn btn-secondary">새글쓰기</a>
+<a href="/articles/{{id}}/editform" class="btn btn-warning">수정</a>
+<a href="/articles/{{id}}/delete" class="btn btn-danger">삭제</a>
+
+{{>layouts/footer}}
